@@ -27,7 +27,7 @@
         [{assign var="iCatCnt" value=$iCatCnt+1 }]
         [{if $iCatCnt <= $oView->getTopNavigationCatCnt() }]
             <li class = "topmenu" [{if $homeSelected == 'false' && $ocat->expanded}]class="current"[{/if}]>
-                <a  class = "topmenulink" [{if $homeSelected == 'false' && $ocat->expanded}]class="current"[{/if}] href="[{$ocat->getLink()}]"><img src="[{$ocat->getThumbUrl() }]"  /><h1>[{$ocat->oxcategories__oxtitle->value}]</h1></a>
+                <a  class = "topmenulink" [{if $homeSelected == 'false' && $ocat->expanded}]class="current"[{/if}] href="[{$ocat->getLink()}]"><img src="[{$ocat->getPictureUrl()}]generated/category/thumb/748_150_75/[{ $ocat->oxcategories__oxthumb->value }]"  /><h1>[{$ocat->oxcategories__oxtitle->value}]</h1></a>
                 [{if $ocat->getSubCats()}]
                     <ul class = "subcategory">
                     [{foreach from=$ocat->getSubCats() item=osubcat key=subcatkey name=SubCat }]

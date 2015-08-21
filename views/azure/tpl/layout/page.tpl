@@ -57,10 +57,23 @@
     <div class ="bottom_wide">
         <div class ="bottom_content_container">
         <div class ="bottom_content bottom_left">
-            [{oxcontent ident = "footer_left_3"}]
+            [{assign var = "langId" value = $oViewConf->getActLanguageId()}]
+            [{if $langId == 0}]
+                [{oxcontent ident = "footer_left_3"}]
+            [{else}]
+
+                [{assign var = "leftRandom" value = 1|rand:3}]
+                [{assign var = "leftRandomContent" value = "footer_left_"|cat:$leftRandom}]
+                [{oxcontent ident = "$leftRandomContent"}]
+            [{/if}]
+            
+            
+
         </div>
         <div class="bottom_content bottom_right">
-            [{oxcontent ident = "footer_right_3"}] 
+            [{assign var = "rightRandom" value = 1|rand:3}]
+            [{assign var = "rightRandomContent" value = "footer_right_"|cat:$rightRandom}] 
+            [{oxcontent ident = $rightRandomContent}]
         </div>
         </div>
     </div>

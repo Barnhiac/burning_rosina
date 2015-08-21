@@ -15,7 +15,7 @@
                 <input class="textbox" type="text" id="searchParam" name="searchparam" value="[{$oView->getSearchParamForHtml()}]" placeholder= "[{ oxmultilang ident='thd_search' }]">
             [{/block}]
             <div class = "btn">
-                <input class="searchSubmit" type="submit" value="[{ oxmultilang ident='thd_search' }]&nbsp;&nbsp;">
+                <input class="searchSubmit" type="submit" value="[{ oxmultilang ident='thd_search' }]&nbsp;&nbsp;&#10148;">
             </div>
         </div>
     </form>
